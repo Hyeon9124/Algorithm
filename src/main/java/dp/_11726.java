@@ -15,6 +15,8 @@ public class _11726 {
         for(int i = 3;  i <= N; i++){
             dp[i] = (dp[i - 1] + dp[i - 2]) % 10007;
         }
+        br.close();
+
         System.out.println(dp[N]);
     }
 }

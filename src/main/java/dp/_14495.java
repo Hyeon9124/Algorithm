@@ -14,6 +14,8 @@ public class _14495 {
         for(int i = 4; i <= N; i++){
             dp[i] = dp[i - 1] + dp[i - 3];
         }
+        br.close();
+        
         System.out.println(dp[N]);
     }
 }
