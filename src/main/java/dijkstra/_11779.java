@@ -81,15 +81,16 @@ public class _11779 {
         dijkstra(a);
         sb.append(arr[b] + "\n");
 
-        Stack<Integer> stack = new Stack<>();
-        stack.push(b);
-        while(path[b] != 0){
-            stack.push(path[b]);
-            b = path[b];
+        ArrayList<Integer> al = new ArrayList<>();
+        int tmp = b;
+
+        while(tmp != 0){
+            al.add(tmp);
+            tmp = path[tmp];
         }
-        sb.append(stack.size() + "\n");
-        while(!stack.isEmpty()){
-            sb.append(stack.pop() + " ");
+        sb.append(al.size() + "\n");
+        for(int i = al.size() - 1; i >= 0; i--){
+            sb.append(al.get(i) + " ");
         }
         System.out.println(sb);
     }
