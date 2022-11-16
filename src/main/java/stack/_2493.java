@@ -1,30 +1,33 @@
-package hash.stack;
+package stack;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
-public class _3986 {
+import java.util.StringTokenizer;
+public class _2493 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-        int count  = 0;
 
+        Stack<int[]> stack = new Stack<>();
+        StringTokenizer st = new StringTokenizer(br.readLine());
         for(int i = 0; i < N; i++){
-            String s = br.readLine();
-            Stack<Character> stack = new Stack<>();
-            for(int j = 0; j < s.length(); j++){
-                if(!stack.empty() && stack.peek() == s.charAt(j)){
+            int tower = Integer.parseInt(st.nextToken());
+
+            while(!stack.empty()){
+                if(stack.peek()[0] < tower){
                     stack.pop();
                 }
                 else{
-                    stack.push(s.charAt(j));
+                    System.out.print(stack.peek()[1] + " ");
+                    break;
                 }
             }
             if(stack.empty()){
-                count++;
+                System.out.print("0 ");
             }
+            stack.push(new int[] {tower, i + 1});
         }
-        System.out.println(count);
     }
 }
