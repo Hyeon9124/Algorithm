@@ -67,3 +67,26 @@ public class _1260 {
         System.out.println(sb);
     }
 }
+/*
+Stack<Integer> stack = new Stack<>();
+        visited = new boolean[N + 1];
+
+        stack.push(V);
+
+        while (!stack.isEmpty()){
+            int tmp = stack.pop();
+
+            if(visited[tmp]){
+                continue;
+            }
+            visited[tmp] = true;
+            sb.append(tmp + " ");
+
+            for(int i = 1; i <= N; i++){
+                if(!visited[i] && arr[tmp][i] == 1){
+                    stack.push(i);
+                }
+            }
+        }
+    }
+ */
