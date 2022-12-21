@@ -25,7 +25,7 @@ public class _5972 {
     static int[] dist;
     static boolean[] visited;
     static final int INF = 987654321;
-    public static int dijkstra(int start, int end){ // 다익스트라 알고리즘
+    public static int dijkstra(int start, int end){
         PriorityQueue<farmstead> q = new PriorityQueue<>();
         q.offer(new farmstead(start, 0));
         dist[start] = 0;
