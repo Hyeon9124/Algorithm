@@ -8,7 +8,6 @@ public class _21937 {
     static int cnt = 0;
     static ArrayList<ArrayList<Integer>> list;
     static boolean[] visited;
-
     public static void dfs(int end){
         visited[end] = true;
 
